@@ -3,7 +3,7 @@ kind: Namespace
 metadata:
   name: {{ .Values.namespace }}
   annotations:
-    openshift.io/node-selector: test-label=2
+    openshift.io/node-selector: test-label=1
 spec:
   finalizers:
   - kubernetes
