@@ -5,5 +5,5 @@ metadata:
   namespace: {{ .Values.namespace }}
 data:
   index.html: |+
-    <h1>Hello World</h1>
-    <p>From {{ .Chart.Name }}</p>
+    Hello World!
+    From {{ .Chart.Name }}
