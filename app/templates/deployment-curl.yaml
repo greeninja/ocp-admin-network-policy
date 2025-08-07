@@ -31,7 +31,7 @@ spec:
         terminationMessagePolicy: File
         command:
         - "sleep"
-        - "1000000000000"
+        - "infinity"
       dnsPolicy: ClusterFirst
       restartPolicy: Always
       schedulerName: default-scheduler

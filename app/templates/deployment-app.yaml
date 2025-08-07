@@ -3,8 +3,8 @@ kind: Deployment
 metadata:
   annotations:
   labels:
-    app: {{ .Chart.Name }}
-  name: {{ .Chart.Name }}
+    app: app
+  name: app
   namespace: {{ .Values.namespace }}
 spec:
   progressDeadlineSeconds: 600
@@ -12,7 +12,7 @@ spec:
   revisionHistoryLimit: 2
   selector:
     matchLabels:
-      app: {{ .Chart.Name }}
+      app: app
   strategy:
     type: Recreate
   template:
@@ -20,12 +20,12 @@ spec:
       annotations:
         io.kubernetes.cri-o.Devices: "/dev/fuse,/dev/net/tun"
       labels:
-        app: {{ .Chart.Name }}
+        app: app
     spec:
       containers:
       - image: busybox:latest
         imagePullPolicy: Always
-        name: {{ .Chart.Name }}
+        name: app
         resources: {}
         terminationMessagePath: /dev/termination-log
         terminationMessagePolicy: File
