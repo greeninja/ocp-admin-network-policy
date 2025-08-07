@@ -5,7 +5,7 @@ metadata:
   annotations:
     openshift.io/node-selector: test-label={{ .Values.testLabel }}
   labels:
-    test-label: {{ .Values.testLabel }}
+    test-label: "{{ .Values.testLabel }}"
 spec:
   finalizers:
   - kubernetes
