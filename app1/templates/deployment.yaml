@@ -42,9 +42,9 @@ spec:
           name: web-cm
           subPath: index.html
       volumes:
-      - name: openvpn-cm
+      - name: web-cm
         configMap:
-          name: openvpn
+          name: web-cm
       dnsPolicy: ClusterFirst
       restartPolicy: Always
       schedulerName: default-scheduler
