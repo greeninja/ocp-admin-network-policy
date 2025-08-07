@@ -6,4 +6,4 @@ metadata:
 data:
   index.html: |+
     Hello World!
-    From {{ .Chart.Name }}
+    From {{ .Values.namespace }} namespace
